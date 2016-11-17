@@ -1,0 +1,5 @@
+lable color :9370DB
+
+button background-color: ADD8E6
+button disabled color : ADD8E6
+button hover background-color : E0FFFF

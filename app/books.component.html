@@ -1,0 +1,22 @@
+<h2>My Books</h2>
+<div>
+  <label>Book name:</label> <input #bookName />
+  <button (click)="add(bookName.value); bookName.value=''">
+    Add
+  </button>
+</div>
+<ul class="books">
+  <li *ngFor="let book of books" (click)="onSelect(book)"
+      [class.selected]="book === selectedBook">
+    <span class="badge">{{book.id}}</span>
+    <span>{{book.name}}</span>
+    <button class="delete"
+      (click)="delete(book); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedBook">
+  <h2>
+    my selected book is  {{selectedBook.name | uppercase}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
