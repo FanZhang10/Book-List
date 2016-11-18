@@ -18,7 +18,7 @@ var DashboardComponent = (function () {
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.bookService.getBooks()
-            .then(function (books) { return _this.books = books.slice(1, 5); });
+            .then(function (books) { return _this.books = books.slice(0, 4); });
     };
     DashboardComponent = __decorate([
         core_1.Component({
